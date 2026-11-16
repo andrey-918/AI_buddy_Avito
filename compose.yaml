@@ -1,0 +1,14 @@
+services:
+  ai-buddy:
+    build: .
+    ports:
+      - "4173:4173"
+    environment:
+      BUDDY_LLM_URL: ${BUDDY_LLM_URL:-}
+      BUDDY_LLM_MODEL: ${BUDDY_LLM_MODEL:-}
+      BUDDY_LLM_API_KEY: ${BUDDY_LLM_API_KEY:-}
+    volumes:
+      - buddy_data:/app/state
+
+volumes:
+  buddy_data:

@@ -1,0 +1,9 @@
+.env
+data/mock-state*.json
+data/demo-fresh*.json
+coverage.out
+*.test
+*.zip
+recordings/
+__pycache__/
+*.pyc

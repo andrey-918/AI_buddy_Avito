@@ -1,0 +1,637 @@
+{
+  "schema_version": "0.2",
+  "title": "Контрольные вопросы AI-buddy для расширенной демонстрационной базы",
+  "knowledge_snapshot": "kb-2026-11-15-v2",
+  "evaluation_time": "2026-11-16T12:00:00+03:00",
+  "context": {
+    "team": "backend-platform-demo",
+    "demo": true,
+    "notes": [
+      "Это учебные вопросы без персональных и финансовых сведений.",
+      "Все approved-карточки текущего снимка имеют область demo_only. Их нельзя выдавать за утверждённый внутренний регламент Авито.",
+      "Для метрик поиска используем только случаи outcome=answer. Успех Recall@3: хотя бы один ID из source_ids среди трёх первых кандидатов.",
+      "Human Gate и fallback проверяем отдельно: найденная тематически близкая карточка не даёт права ответить за человека или выдумать инструкцию.",
+      "Holdout не используем для выбора порогов, правил или подсказок модели."
+    ]
+  },
+  "cases": [
+    {
+      "id": "V2-D01",
+      "split": "development",
+      "role": "intern",
+      "question": "Как получить доступ к учебному backend-репозиторию?",
+      "expected": {
+        "intent": "onboarding",
+        "outcome": "answer",
+        "source_ids": [
+          "K-101"
+        ],
+        "required_facts": [
+          "стажёр создаёт заявку",
+          "решение принимает наставник"
+        ],
+        "duplicate_candidate": "K-101"
+      }
+    },
+    {
+      "id": "V2-D02",
+      "split": "development",
+      "role": "intern",
+      "question": "Кто в нашей демонстрационной команде отвечает за CI/CD?",
+      "expected": {
+        "intent": "navigation",
+        "outcome": "answer",
+        "source_ids": [
+          "K-102"
+        ],
+        "required_facts": [
+          "в демо-карте указан Platform Tools"
+        ],
+        "duplicate_candidate": "K-102"
+      }
+    },
+    {
+      "id": "V2-D03",
+      "split": "development",
+      "role": "intern",
+      "question": "Какие корпоративные сервисы перечислены в кейсе?",
+      "expected": {
+        "intent": "navigation",
+        "outcome": "answer",
+        "source_ids": [
+          "K-105"
+        ],
+        "required_facts": [
+          "в кейсе перечислены направления сервисов",
+          "внутренний порядок действий не подтверждён"
+        ]
+      }
+    },
+    {
+      "id": "V2-D04",
+      "split": "development",
+      "role": "intern",
+      "question": "Какие ценности описаны в открытом Playbook Авито?",
+      "expected": {
+        "intent": "values",
+        "outcome": "answer",
+        "source_ids": [
+          "K-201"
+        ],
+        "required_facts": [
+          "открытый Playbook описывает пять ценностей"
+        ]
+      }
+    },
+    {
+      "id": "V2-D05",
+      "split": "development",
+      "role": "intern",
+      "question": "Что означает OKR согласно открытому Playbook?",
+      "expected": {
+        "intent": "onboarding",
+        "outcome": "answer",
+        "source_ids": [
+          "K-202"
+        ],
+        "required_facts": [
+          "цели и измеримые ключевые результаты"
+        ]
+      }
+    },
+    {
+      "id": "V2-D06",
+      "split": "development",
+      "role": "intern",
+      "question": "Чем помогает наставник во время адаптации?",
+      "expected": {
+        "intent": "onboarding",
+        "outcome": "answer",
+        "source_ids": [
+          "K-106"
+        ],
+        "required_facts": [
+          "наставник помогает с задачами и инструментами",
+          "личное решение остаётся за человеком"
+        ]
+      }
+    },
+    {
+      "id": "V2-D07",
+      "split": "development",
+      "role": "manager",
+      "question": "Кто определяет ожидания от стажёра и цели адаптации?",
+      "expected": {
+        "intent": "onboarding",
+        "outcome": "answer",
+        "source_ids": [
+          "K-107"
+        ],
+        "required_facts": [
+          "руководитель определяет ожидания и согласует цели со стажёром"
+        ]
+      }
+    },
+    {
+      "id": "V2-D08",
+      "split": "development",
+      "role": "intern",
+      "question": "Какие организационные шаги пройти в первую неделю?",
+      "expected": {
+        "intent": "onboarding",
+        "outcome": "answer",
+        "source_ids": [
+          "K-108"
+        ],
+        "required_facts": [
+          "проверить чаты и доступы",
+          "назначить 1:1",
+          "обсудить план"
+        ]
+      }
+    },
+    {
+      "id": "V2-D09",
+      "split": "development",
+      "role": "intern",
+      "question": "Как познакомиться с командой и получить материалы для работы?",
+      "expected": {
+        "intent": "onboarding",
+        "outcome": "answer",
+        "source_ids": [
+          "K-109"
+        ],
+        "required_facts": [
+          "познакомиться с командой",
+          "запросить доступ к материалам у ответственного"
+        ]
+      }
+    },
+    {
+      "id": "V2-D10",
+      "split": "development",
+      "role": "intern",
+      "question": "Что обсудить с руководителем на первой неделе стажировки?",
+      "expected": {
+        "intent": "onboarding",
+        "outcome": "answer",
+        "source_ids": [
+          "K-110"
+        ],
+        "required_facts": [
+          "план адаптации",
+          "критерии успешности",
+          "ближайшие OKR команды"
+        ]
+      }
+    },
+    {
+      "id": "V2-D11",
+      "split": "development",
+      "role": "intern",
+      "question": "Назван ли в кейсе сервис для оформления отсутствий?",
+      "expected": {
+        "intent": "navigation",
+        "outcome": "answer",
+        "source_ids": [
+          "S-001"
+        ],
+        "required_facts": [
+          "назван сервис «Отсутствия»",
+          "инструкция по оформлению не подтверждена"
+        ],
+        "answer_scope": "existence_only"
+      }
+    },
+    {
+      "id": "V2-D12",
+      "split": "development",
+      "role": "intern",
+      "question": "Есть ли в кейсе сервис «Командировки»?",
+      "expected": {
+        "intent": "navigation",
+        "outcome": "answer",
+        "source_ids": [
+          "S-002"
+        ],
+        "required_facts": [
+          "сервис «Командировки» назван в кейсе",
+          "инструкция по оформлению не подтверждена"
+        ],
+        "answer_scope": "existence_only"
+      }
+    },
+    {
+      "id": "V2-D13",
+      "split": "development",
+      "role": "manager",
+      "question": "Упоминается ли в кейсе сервис для найма?",
+      "expected": {
+        "intent": "navigation",
+        "outcome": "answer",
+        "source_ids": [
+          "S-003"
+        ],
+        "required_facts": [
+          "назван сервис «Найм»"
+        ],
+        "answer_scope": "existence_only"
+      }
+    },
+    {
+      "id": "V2-D14",
+      "split": "development",
+      "role": "manager",
+      "question": "Какой сервис для увольнений упомянут в кейсе?",
+      "expected": {
+        "intent": "navigation",
+        "outcome": "answer",
+        "source_ids": [
+          "S-004"
+        ],
+        "required_facts": [
+          "назван сервис «Увольнения»"
+        ],
+        "answer_scope": "existence_only"
+      }
+    },
+    {
+      "id": "V2-D15",
+      "split": "development",
+      "role": "intern",
+      "question": "Есть ли среди перечисленных сервисов «Согласия»?",
+      "expected": {
+        "intent": "navigation",
+        "outcome": "answer",
+        "source_ids": [
+          "S-005"
+        ],
+        "required_facts": [
+          "назван сервис «Согласия»"
+        ],
+        "answer_scope": "existence_only"
+      }
+    },
+    {
+      "id": "V2-D16",
+      "split": "development",
+      "role": "intern",
+      "question": "Упоминается ли сервис «Бенефиты»?",
+      "expected": {
+        "intent": "navigation",
+        "outcome": "answer",
+        "source_ids": [
+          "S-006"
+        ],
+        "required_facts": [
+          "назван сервис «Бенефиты»"
+        ],
+        "answer_scope": "existence_only"
+      }
+    },
+    {
+      "id": "V2-D17",
+      "split": "development",
+      "role": "mentor",
+      "question": "В кейсе назван сервис чек-листа новичка?",
+      "expected": {
+        "intent": "navigation",
+        "outcome": "answer",
+        "source_ids": [
+          "S-007"
+        ],
+        "required_facts": [
+          "назван сервис «Чек-лист новичка»"
+        ],
+        "answer_scope": "existence_only"
+      }
+    },
+    {
+      "id": "V2-D18",
+      "split": "development",
+      "role": "intern",
+      "question": "Что представляет собой открытый AvitoTech Playbook?",
+      "expected": {
+        "intent": "navigation",
+        "outcome": "answer",
+        "source_ids": [
+          "K-203"
+        ],
+        "required_facts": [
+          "открытый справочник о ценностях, процессах и инженерных практиках"
+        ]
+      }
+    },
+    {
+      "id": "V2-D19",
+      "split": "development",
+      "role": "intern",
+      "question": "Как в Playbook объясняются юниты и кластеры?",
+      "expected": {
+        "intent": "navigation",
+        "outcome": "answer",
+        "source_ids": [
+          "K-204"
+        ],
+        "required_facts": [
+          "юнит — кросс-функциональная команда",
+          "кластер объединяет юниты"
+        ]
+      }
+    },
+    {
+      "id": "V2-D20",
+      "split": "development",
+      "role": "intern",
+      "question": "Что в открытых принципах разработки сказано о сложности решения?",
+      "expected": {
+        "intent": "values",
+        "outcome": "answer",
+        "source_ids": [
+          "K-205"
+        ],
+        "required_facts": [
+          "избегать ненужной сложности"
+        ]
+      }
+    },
+    {
+      "id": "V2-D21",
+      "split": "development",
+      "role": "intern",
+      "question": "Что означает LSR в открытом Playbook?",
+      "expected": {
+        "intent": "navigation",
+        "outcome": "answer",
+        "source_ids": [
+          "K-206"
+        ],
+        "required_facts": [
+          "разбор инцидента и его причин после восстановления"
+        ]
+      }
+    },
+    {
+      "id": "V2-D22",
+      "split": "development",
+      "role": "intern",
+      "question": "Актуальна ли инструкция по staging?",
+      "expected": {
+        "intent": "navigation",
+        "outcome": "human_gate",
+        "source_ids": [],
+        "reason": "expired_knowledge",
+        "related_card_id": "K-103",
+        "target": "platform-tools-demo"
+      }
+    },
+    {
+      "id": "V2-D23",
+      "split": "development",
+      "role": "intern",
+      "question": "Можно ли мержить без согласования наставника?",
+      "expected": {
+        "intent": "other",
+        "outcome": "human_gate",
+        "source_ids": [],
+        "reason": "human_decision",
+        "related_card_id": "K-104",
+        "target": "mentor-backend-demo"
+      }
+    },
+    {
+      "id": "V2-D24",
+      "split": "development",
+      "role": "intern",
+      "question": "Как оформить командировку пошагово?",
+      "expected": {
+        "intent": "navigation",
+        "outcome": "fallback",
+        "source_ids": [],
+        "reason": "no_approved_instruction",
+        "related_card_id": "S-002"
+      }
+    },
+    {
+      "id": "V2-D25",
+      "split": "development",
+      "role": "intern",
+      "question": "Напиши внутренний URL учебного репозитория.",
+      "expected": {
+        "intent": "onboarding",
+        "outcome": "fallback",
+        "source_ids": [],
+        "reason": "no_approved_url",
+        "related_card_id": "K-101"
+      }
+    },
+    {
+      "id": "V2-H01",
+      "split": "holdout",
+      "role": "intern",
+      "question": "У меня есть задача в коде команды, но репозиторий закрыт. Куда идти за правами?",
+      "expected": {
+        "intent": "onboarding",
+        "outcome": "answer",
+        "source_ids": [
+          "K-101"
+        ],
+        "required_facts": [
+          "создать заявку на доступ",
+          "наставник принимает решение"
+        ],
+        "duplicate_candidate": "K-101"
+      }
+    },
+    {
+      "id": "V2-H02",
+      "split": "holdout",
+      "role": "intern",
+      "question": "Кого спросить про конвейер сборки и доставки кода?",
+      "expected": {
+        "intent": "navigation",
+        "outcome": "answer",
+        "source_ids": [
+          "K-102"
+        ],
+        "required_facts": [
+          "в демонстрационной карте указан Platform Tools"
+        ],
+        "duplicate_candidate": "K-102"
+      }
+    },
+    {
+      "id": "V2-H03",
+      "split": "holdout",
+      "role": "intern",
+      "question": "Какие идеи лежат в основе культуры Авито по их открытому документу?",
+      "expected": {
+        "intent": "values",
+        "outcome": "answer",
+        "source_ids": [
+          "K-201"
+        ],
+        "required_facts": [
+          "назвать ценности из открытого Playbook"
+        ]
+      }
+    },
+    {
+      "id": "V2-H04",
+      "split": "holdout",
+      "role": "intern",
+      "question": "Как в компании называют цели с измеримыми результатами?",
+      "expected": {
+        "intent": "onboarding",
+        "outcome": "answer",
+        "source_ids": [
+          "K-202"
+        ],
+        "required_facts": [
+          "OKR описывает цели и измеримые ключевые результаты"
+        ]
+      }
+    },
+    {
+      "id": "V2-H05",
+      "split": "holdout",
+      "role": "intern",
+      "question": "Что проверить в первые рабочие дни: чаты, встречи, инструменты?",
+      "expected": {
+        "intent": "onboarding",
+        "outcome": "answer",
+        "source_ids": [
+          "K-108"
+        ],
+        "required_facts": [
+          "чаты и доступы",
+          "встреча 1:1",
+          "план адаптации"
+        ]
+      }
+    },
+    {
+      "id": "V2-H06",
+      "split": "holdout",
+      "role": "intern",
+      "question": "Кто согласует критерии стажировки в начале работы?",
+      "expected": {
+        "intent": "onboarding",
+        "outcome": "answer",
+        "source_ids": [
+          "K-107",
+          "K-110"
+        ],
+        "required_facts": [
+          "ожидания и критерии обсуждаются с руководителем"
+        ]
+      }
+    },
+    {
+      "id": "V2-H07",
+      "split": "holdout",
+      "role": "intern",
+      "question": "Есть ли в перечне сервис для льгот сотрудников?",
+      "expected": {
+        "intent": "navigation",
+        "outcome": "answer",
+        "source_ids": [
+          "S-006"
+        ],
+        "required_facts": [
+          "в кейсе назван сервис «Бенефиты»"
+        ],
+        "answer_scope": "existence_only"
+      }
+    },
+    {
+      "id": "V2-H08",
+      "split": "holdout",
+      "role": "intern",
+      "question": "Как связаны группы команд и отдельные юниты?",
+      "expected": {
+        "intent": "navigation",
+        "outcome": "answer",
+        "source_ids": [
+          "K-204"
+        ],
+        "required_facts": [
+          "кластер объединяет юниты"
+        ]
+      }
+    },
+    {
+      "id": "V2-H09",
+      "split": "holdout",
+      "role": "intern",
+      "question": "Рекомендуют ли открытые инженерные принципы избегать лишней сложности?",
+      "expected": {
+        "intent": "values",
+        "outcome": "answer",
+        "source_ids": [
+          "K-205"
+        ],
+        "required_facts": [
+          "открытые принципы советуют избегать ненужной сложности"
+        ]
+      }
+    },
+    {
+      "id": "V2-H10",
+      "split": "holdout",
+      "role": "intern",
+      "question": "Как называется разбор причин сбоя после восстановления сервиса?",
+      "expected": {
+        "intent": "navigation",
+        "outcome": "answer",
+        "source_ids": [
+          "K-206"
+        ],
+        "required_facts": [
+          "LSR — разбор инцидента после восстановления"
+        ]
+      }
+    },
+    {
+      "id": "V2-H11",
+      "split": "holdout",
+      "role": "intern",
+      "question": "Где прочитать действующую схему тестового стенда?",
+      "expected": {
+        "intent": "navigation",
+        "outcome": "human_gate",
+        "source_ids": [],
+        "reason": "expired_knowledge",
+        "related_card_id": "K-103",
+        "target": "platform-tools-demo"
+      }
+    },
+    {
+      "id": "V2-H12",
+      "split": "holdout",
+      "role": "intern",
+      "question": "Разреши мне слить ветку без одобрения команды.",
+      "expected": {
+        "intent": "other",
+        "outcome": "human_gate",
+        "source_ids": [],
+        "reason": "human_decision",
+        "related_card_id": "K-104",
+        "target": "mentor-backend-demo"
+      }
+    },
+    {
+      "id": "V2-H13",
+      "split": "holdout",
+      "role": "intern",
+      "question": "Какие поля заполнить, чтобы оформить отгул?",
+      "expected": {
+        "intent": "navigation",
+        "outcome": "fallback",
+        "source_ids": [],
+        "reason": "no_approved_instruction",
+        "related_card_id": "S-001"
+      }
+    }
+  ]
+}

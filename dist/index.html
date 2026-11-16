@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="AI-buddy — демонстрационный помощник для адаптации backend-стажёра">
+  <title>AI-buddy — адаптация без лишней рутины</title>
+  <link rel="stylesheet" href="./styles.css?v=avito8">
+</head>
+<body>
+  <div class="demo-bar"><span class="demo-dot"></span> Демо · синтетические данные</div>
+  <div class="shell">
+    <aside class="sidebar" aria-label="Навигация">
+      <a class="brand" href="#home" data-view="home" aria-label="AI-buddy, главная"><span class="avito-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span class="brand-word">авито<small>AI-buddy · демо</small></span></a>
+      <div class="workspace"><span class="workspace-icon">B</span><span><strong>Backend Platform</strong><small>Демо-команда</small></span><span class="chevron">⌄</span></div>
+      <div class="nav-label">РАБОЧЕЕ ПРОСТРАНСТВО</div>
+      <nav id="main-nav">
+        <button class="nav-item active" data-view="home"><span class="nav-icon">⌂</span> Главная</button>
+        <button class="nav-item" data-view="chat"><span class="nav-icon">✧</span> Спросить AI-buddy</button>
+        <button class="nav-item" data-view="week"><span class="nav-icon">▦</span> Моя неделя</button>
+        <button class="nav-item" data-view="services"><span class="nav-icon">⬡</span> Сервисы</button>
+        <button class="nav-item" data-view="team"><span class="nav-icon">♧</span> Команда</button>
+      </nav>
+      <div class="sidebar-bottom"><div class="mentor-card"><div class="avatar violet">М</div><div><strong>Наставник рядом</strong><small>Важные решения остаются за человеком</small></div></div><div class="side-foot">AI-buddy · Hack&Change 2026</div></div>
+    </aside>
+    <main class="main">
+      <header class="topbar"><div class="crumb">AI-buddy <span>/</span> <strong id="page-crumb">Главная</strong></div><div class="top-actions"><span class="status"><i></i> Демо-режим</span><label class="role-picker">Роль <select id="role-select" aria-label="Выбрать роль"><option value="intern">Стажёр</option><option value="mentor">Наставник</option><option value="manager">Руководитель</option></select></label><div class="avatar blue" aria-hidden="true">A</div></div></header>
+      <div id="app" aria-live="polite"></div>
+    </main>
+  </div>
+  <div id="role-gate" class="role-gate" hidden></div>
+  <script src="./app.js?v=avito9" defer></script>
+</body>
+</html>
